@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".fragments.AboutFragment">
+
+    <TextView
+        android:id="@+id/about_credits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="@string/penny_drop_created_by"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/about_quote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/about_quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:paddingBottom="32dp"
+        android:text="@string/penny_drop_description"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/about_credits" />
+
+    <TextView
+        android:id="@+id/about_icon_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_quote" />
+
+    <ImageView
+        android:id="@+id/about_coin_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/coin_icon"
+        android:minHeight="52dp"
+        android:src="@drawable/mdi_coin_black_24dp"
+        app:layout_constraintEnd_toStartOf="@id/about_dice_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_icon_credits" />
+
+    <ImageView
+        android:id="@+id/about_dice_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/dice_icon"
+        android:minHeight="52dp"
+        android:src="@drawable/mdi_dice_6_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/about_coin_icon"
+        app:layout_constraintTop_toBottomOf="@+id/about_icon_credits" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

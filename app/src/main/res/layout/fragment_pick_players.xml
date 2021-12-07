@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="dev.mfazio.pennydrop.viewmodels.PickPlayersViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        tools:context=".fragments.PickPlayersFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/mainPlayer"
+                layout="@layout/player_list_item"
+                app:player="@{vm.players[0]}" />
+
+            <include
+                android:id="@+id/player2"
+                layout="@layout/player_list_item"
+                app:player="@{vm.players[1]}" />
+
+            <include
+                android:id="@+id/player3"
+                layout="@layout/player_list_item"
+                app:player="@{vm.players[2]}" />
+
+            <include
+                android:id="@+id/player4"
+                layout="@layout/player_list_item"
+                app:player="@{vm.players[3]}" />
+
+            <include
+                android:id="@+id/player5"
+                layout="@layout/player_list_item"
+                app:player="@{vm.players[4]}" />
+
+            <include
+                android:id="@+id/player6"
+                layout="@layout/player_list_item"
+                app:player="@{vm.players[5]}" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonPlayGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/play_game_button"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            app:tint="?android:attr/textColorPrimaryInverse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

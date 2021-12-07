@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Game Settings">
+        <SeekBarPreference
+            android:defaultValue="10"
+            android:key="pennyCount"
+            android:max="20"
+            android:summary="@string/starting_penny_count_new_game"
+            android:title="@string/starting_penny_count"
+            app:min="1"
+            app:showSeekBarValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="fastAI"
+            android:summary="@string/fast_ai_summary"
+            android:title="@string/fast_ai" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Theme Settings">
+        <DropDownPreference
+            android:defaultValue="AppTheme"
+            android:entries="@array/themes"
+            android:entryValues="@array/theme_values"
+            android:key="theme"
+            android:title="@string/app_theme"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:defaultValue="System"
+            android:entries="@array/theme_modes"
+            android:entryValues="@array/theme_mode_values"
+            android:key="themeMode"
+            android:title="@string/theme_mode"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About the App">
+        <Preference
+            android:key="credits"
+            android:summary="@string/about_app_summary"
+            android:title="@string/about_penny_drop" />
+    </PreferenceCategory>
+</PreferenceScreen>

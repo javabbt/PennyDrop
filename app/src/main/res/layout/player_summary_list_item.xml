@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="playerSummary"
+            type="dev.mfazio.pennydrop.types.PlayerSummary" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/playerTypeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/player_type_image"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:playerSummaryAvatarSrc="@{playerSummary.isHuman}"
+            app:playerSummaryAvatarTint="@{playerSummary.isHuman}" />
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{playerSummary.name}"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@id/playerGamesPlayed"
+            app:layout_constraintStart_toEndOf="@id/playerTypeImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Michael" />
+
+        <TextView
+            android:id="@+id/playerGamesPlayed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{playerSummary.gamesPlayed + " " + @string/games_played}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/playerName"
+            app:layout_constraintTop_toBottomOf="@id/playerName"
+            tools:text="23 games played" />
+
+        <TextView
+            android:id="@+id/playerGamesWon"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text='@{playerSummary.winsString}'
+            android:textAlignment="center"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textWins"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/textWins"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@{@plurals/wins(playerSummary.wins)}"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="wins"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

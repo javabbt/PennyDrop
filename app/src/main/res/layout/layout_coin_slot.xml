@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="slot"
+            type="dev.mfazio.pennydrop.types.Slot" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutCoinSlot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/coinImageCoinSlot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/coin_icon"
+            android:minWidth="36dp"
+            android:minHeight="36dp"
+            android:src="@drawable/mdi_coin_black_24dp"
+            android:tint="@color/coin_slot_color"
+            app:isHidden="@{!slot.canBeFilled || !slot.isFilled}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:slotLastRolled="@{slot.lastRolled}" />
+
+        <View
+            android:id="@+id/bottomViewCoinSlot"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@android:color/white"
+            android:backgroundTint="@color/coin_slot_color"
+            app:layout_constraintEnd_toEndOf="@id/coinImageCoinSlot"
+            app:layout_constraintStart_toStartOf="@id/coinImageCoinSlot"
+            app:layout_constraintTop_toBottomOf="@id/coinImageCoinSlot"
+            app:slotLastRolled="@{slot.lastRolled}" />
+
+        <TextView
+            android:id="@+id/slotNumberCoinSlot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{slot.number + ""}'
+            android:textColor="@color/coin_slot_color"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/coinImageCoinSlot"
+            app:layout_constraintStart_toStartOf="@id/coinImageCoinSlot"
+            app:layout_constraintTop_toBottomOf="@id/bottomViewCoinSlot"
+            app:slotLastRolled="@{slot.lastRolled}"
+            tools:text="3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

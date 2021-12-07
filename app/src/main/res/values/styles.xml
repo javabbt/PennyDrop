@@ -1,0 +1,49 @@
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/nightLightGray</item>
+    </style>
+
+    <style name="Kotlin" parent="AppTheme">
+        <item name="colorPrimary">@color/kotlinBlue</item>
+        <item name="colorPrimaryDark">@color/kotlinPurple</item>
+        <item name="colorAccent">@color/kotlinOrange</item>
+    </style>
+
+    <style name="Crew" parent="AppTheme">
+        <item name="colorPrimary">@color/crewBlue</item>
+        <item name="colorPrimaryDark">@color/crewLightBlue</item>
+        <item name="colorAccent">@color/crewGold</item>
+        <item name="colorSurface">@color/crewBlue</item>
+    </style>
+
+    <style name="FTD" parent="AppTheme">
+        <item name="colorPrimary">@color/ftdGreen</item>
+        <item name="colorPrimaryDark">@color/ftdGreen</item>
+        <item name="colorAccent">@color/ftdBlue</item>
+    </style>
+
+    <style name="GPG" parent="AppTheme">
+        <item name="colorPrimary">@color/packGreen</item>
+        <item name="colorPrimaryDark">@color/packGreen</item>
+        <item name="colorAccent">@color/packGold</item>
+        <item name="colorSurface">@color/packGreenDark</item>
+    </style>
+
+    <style name="Hazel" parent="AppTheme">
+        <item name="colorPrimary">@color/hazelBlue</item>
+        <item name="colorPrimaryDark">@color/hazelDarkBlue</item>
+        <item name="colorAccent">@color/hazelPink</item>
+    </style>
+
+</resources>

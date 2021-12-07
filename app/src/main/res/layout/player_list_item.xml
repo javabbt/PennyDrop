@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="dev.mfazio.pennydrop.game.AI" />
+
+        <variable
+            name="player"
+            type="dev.mfazio.pennydrop.types.NewPlayer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkbox_player_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@={player.isIncluded}"
+            android:visibility="@{player.canBeRemoved ? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/edit_text_player_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edit_text_player_name" />
+
+        <EditText
+            android:id="@+id/edit_text_player_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:enabled="@{player.isIncluded}"
+            android:hint="@string/player_name"
+            android:inputType="textPersonName"
+            android:text="@={player.playerName}"
+            android:visibility="@{player.isHuman ? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintEnd_toStartOf="@+id/switch_player_type"
+            app:layout_constraintStart_toEndOf="@id/checkbox_player_active"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_ai_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:enabled="@{player.isIncluded}"
+            android:entries="@{AI.getBasicAI()}"
+            android:selectedItemPosition="@={player.selectedAIPosition}"
+            android:visibility="@{player.isHuman ? View.INVISIBLE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/edit_text_player_name"
+            app:layout_constraintEnd_toStartOf="@+id/switch_player_type"
+            app:layout_constraintStart_toEndOf="@id/checkbox_player_active"
+            app:layout_constraintTop_toTopOf="@id/edit_text_player_name" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_player_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@={player.isHuman}"
+            android:enabled="@{player.isIncluded}"
+            android:thumb="@drawable/ai_toggle_bg"
+            android:thumbTint="@color/ai_toggle_color"
+            android:trackTint="@color/ai_toggle_color"
+            android:visibility="@{player.canBeToggled ? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/edit_text_player_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edit_text_player_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

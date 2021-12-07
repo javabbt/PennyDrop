@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gameFragment">
+
+    <fragment
+        android:id="@+id/pickPlayersFragment"
+        android:name="dev.mfazio.pennydrop.fragments.PickPlayersFragment"
+        android:label="@string/pick_players" />
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="dev.mfazio.pennydrop.fragments.GameFragment"
+        android:label="@string/penny_drop" />
+
+    <fragment
+        android:id="@+id/rankingsFragment"
+        android:name="dev.mfazio.pennydrop.fragments.RankingsFragment"
+        android:label="@string/rankings" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="dev.mfazio.pennydrop.fragments.SettingsFragment"
+        android:label="@string/settings" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="dev.mfazio.pennydrop.fragments.AboutFragment"
+        android:label="@string/about_penny_drop" />
+
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/pickPlayersFragment"
+        android:icon="@drawable/ic_baseline_face_24"
+        android:title="@string/players" />
+    <item
+        android:id="@+id/gameFragment"
+        android:icon="@drawable/mdi_dice_6_black_24dp"
+        android:title="@string/game" />
+    <item
+        android:id="@+id/rankingsFragment"
+        android:icon="@drawable/ic_baseline_format_list_numbered_24"
+        android:title="@string/rankings" />
+</menu>

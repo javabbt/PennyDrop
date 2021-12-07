@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="plainGray">#CCC</color>
+    <color name="darkGray">#121212</color>
+    <color name="nightLightGray">#232323</color>
+
+    <color name="crewBlue">#11284B</color>
+    <color name="crewGold">#FEC52E</color>
+    <color name="crewLightBlue">#1C4499</color>
+
+    <color name="ftdBlue">#007DC5</color>
+    <color name="ftdCream">#F0EBD2</color>
+    <color name="ftdGreen">#00471B</color>
+
+    <color name="kotlinBlue">#178dd7</color>
+    <color name="kotlinOrange">#f98908</color>
+    <color name="kotlinPink">#c359bc</color>
+    <color name="kotlinPurple">#806fe3</color>
+
+    <color name="packGreen">#1F3730</color>
+    <color name="packGreenDark">#182c26</color>
+    <color name="packGold">#FFB710</color>
+
+    <color name="hazelBlue">#0CECF7</color>
+    <color name="hazelDarkBlue">#016065</color>
+    <color name="hazelPink">#F980F3</color>
+</resources>

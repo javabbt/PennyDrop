@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<resources>
+    <string-array name="themes">
+        <item>Default</item>
+        <item>Kotlin</item>
+        <item>Crew</item>
+        <item>FTD</item>
+        <item>GPG</item>
+        <item>HMF</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>AppTheme</item>
+        <item>Kotlin</item>
+        <item>Crew</item>
+        <item>FTD</item>
+        <item>GPG</item>
+        <item>Hazel</item>
+    </string-array>
+    <string-array name="theme_modes">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System Default</item>
+    </string-array>
+    <string-array name="theme_mode_values">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System</item>
+    </string-array>
+</resources>

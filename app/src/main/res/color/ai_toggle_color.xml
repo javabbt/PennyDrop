@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Kotlin and Android Development featuring Jetpack",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/mfjetpack for more book information.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:color="@android:color/darker_gray"
+        android:state_enabled="false" />
+    <item
+        android:color="@android:color/holo_blue_bright"
+        android:state_checked="true" />
+    <item
+        android:color="@android:color/holo_green_light"
+        android:state_checked="false" />
+</selector>
